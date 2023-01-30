@@ -116,13 +116,18 @@ public class WhatsappRepository {
         else {
             List<User> users=groupUserMap.get(groupuser);
             users.remove(user);
+            List<Message> messages1=new ArrayList<>();
             for(Message message:senderMap.keySet()){
                 if(senderMap.get(message).equals(user)){
                     List<Message> messages=groupMessageMap.get(groupuser);
                     messages.remove(message);
-                    senderMap.remove(message);
+                    messages.add(message);
                 }
             }
+            for(Message message:messages1){
+                senderMap.remove(message);
+            }
+
         }
         String mobile=user.getMobile();
         userMobile.remove(mobile);
