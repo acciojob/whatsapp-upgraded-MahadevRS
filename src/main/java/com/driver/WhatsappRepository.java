@@ -106,7 +106,7 @@ public class WhatsappRepository {
                 }
             }
         }
-        if(groupuser.getName().equals(null)){
+        if(groupuser.getName()==null){
             throw new Exception("User not found");
         }
         else if(adminMap.get(groupuser).equals(user)){
