@@ -121,7 +121,7 @@ public class WhatsappRepository {
                 if(senderMap.get(message).equals(user)){
                     List<Message> messages=groupMessageMap.get(groupuser);
                     messages.remove(message);
-                    messages.add(message);
+                    messages1.add(message);
                 }
             }
             for(Message message:messages1){
