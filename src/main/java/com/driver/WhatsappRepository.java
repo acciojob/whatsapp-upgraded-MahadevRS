@@ -126,7 +126,9 @@ public class WhatsappRepository {
         String mobile=user.getMobile();
         userMobile.remove(mobile);
         int n=0;
-        n=groupUserMap.get(groupuser).size()+groupMessageMap.get(groupuser).size()+senderMap.size();
+        List<User> usersingroup=groupUserMap.get(groupuser);
+        List<Message> messageList=groupMessageMap.get(groupuser);
+        n=usersingroup.size()+messageList.size()+senderMap.size();
         return n;
     }
 
