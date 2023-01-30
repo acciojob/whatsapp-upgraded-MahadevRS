@@ -99,7 +99,8 @@ public class WhatsappRepository {
 
         Group groupuser=new Group();
         for(Group group:groupUserMap.keySet()){
-            for(User users:groupUserMap.get(group)){
+            List<User> userList=groupUserMap.get(group);
+            for(User users:userList){
                 if(users.equals(user)){
                     groupuser=group;
                     break;
